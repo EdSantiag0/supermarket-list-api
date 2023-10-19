@@ -10,7 +10,7 @@ app.use(
     origin: "*",
   })
 );
-const port = Number(process.env.PORT) || 3333;
+const port = Number(process.env.PORT || 3333);
 
 async function connectDatabase() {
   await mongoose.connect(process.env.DATABASE_URL);
